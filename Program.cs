@@ -2,7 +2,7 @@
 
 namespace odev_4
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
@@ -18,20 +18,29 @@ namespace odev_4
             {
                 Console.WriteLine("Bir Sayı Giriniz!");
                 int sayi = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Girdiğiniz Sayı: "+ sayi);
+                Console.WriteLine("Girdiğiniz Sayi: "+ sayi);
                                
             }
-            catch(Exception ex)
+            catch(Exception Hata)
             {
-                Console.WriteLine("Hatanız: "+ ex.Message.ToString());
+                Console.WriteLine("Hata: "+ Hata.Message.ToString());
             }
-            finally
+            /*finally
             {
-                Console.Write("İşlem tamamlandı :)");
+                Console.Write("İşlem tamamlandı.");
+            }*/
+            try
+            {
+                int a = int.Parse(null);
             }
-             Console.Read();
-
-
+            catch (ArgumentNullException.Hata)
+            {
+            Console.WriteLine("Boş değer girdiniz");
+            Console.WriteLine(Hata);
+            }
+                
+               
+            
         }
     }
 }
