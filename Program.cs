@@ -25,10 +25,32 @@ namespace odev_4
             {
                 Console.WriteLine("Hata: "+ ex.Message.ToString());
             }
-            /*finally
+            try
             {
-                Console.Write("İşlem tamamlandı.");
-            }*
+                int a = int.Parse("test");
+            }
+            catch (ArgumentNullException ex)
+            {
+                
+                Console.WriteLine("Boş Değer");
+                Console.WriteLine(ex);
+            }
+            catch (FormatException ex)
+            {
+                
+                Console.WriteLine("Veri tipi uygun değil");
+                Console.WriteLine(ex);
+            }
+            catch (OverflowException ex)
+            {
+                
+                Console.WriteLine("Çok Büyük Yada Küçük Değer Girdiniz !");
+                Console.WriteLine(ex);
+            }
+            finally
+            {
+                Console.WriteLine("İşlem Tamamlandır :=) ");
+            }
                
         }
     }
