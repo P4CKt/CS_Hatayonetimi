@@ -23,7 +23,7 @@ namespace odev_4
             }
             catch(Exception ex)
             {
-                Console.WriteLine("Hatanız: "+ ex.Message);
+                Console.WriteLine("Hatanız: "+ ex.Message.ToString());
             }
             finally
             {
