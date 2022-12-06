@@ -21,26 +21,15 @@ namespace odev_4
                 Console.WriteLine("Girdiğiniz Sayi: "+ sayi);
                                
             }
-            catch(Exception Hata)
+            catch(Exception ex)
             {
-                Console.WriteLine("Hata: "+ Hata.Message.ToString());
+                Console.WriteLine("Hata: "+ ex.Message.ToString());
             }
             /*finally
             {
                 Console.Write("İşlem tamamlandı.");
-            }*/
-            try
-            {
-                int a = int.Parse(null);
-            }
-            catch (ArgumentNullException.Hata)
-            {
-            Console.WriteLine("Boş değer girdiniz");
-            Console.WriteLine(Hata);
-            }
-                
+            }*
                
-            
         }
     }
 }
